@@ -6,18 +6,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class ClaseBase {
-    private WebDriver driver;
+public class BaseClass {
+    protected WebDriver driver;
     private WebDriverWait wait;
 
 
     // driver
-    public ClaseBase(WebDriver driver) {
+    public BaseClass(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -55,8 +56,8 @@ public class ClaseBase {
         this.driver.findElement(localizador).sendKeys(texto);
     }
 
-    public void agregarTexto(WebElement elemento, String texto){
-        elemento.sendKeys(texto);
+    public void agregarTexto(WebElement elementoWeb, String texto){
+        elementoWeb.sendKeys(texto);
     }
 
     public String obtenerTexto(By localizador, String texto){
@@ -75,7 +76,7 @@ public class ClaseBase {
 
 
     //pagina
-    public void cargarPagina(String url){
+    public void cargarSitio(String url){
         this.driver.get(url);
     }
 
@@ -91,8 +92,8 @@ public class ClaseBase {
 
 
     //espera explicita
-    public WebElement esperarPorPresenciaElemento(By localizador){
-        wait = new WebDriverWait(this.driver,20);
+    public WebElement esperaExplicita(By localizador){
+        wait = new WebDriverWait(this.driver,30);
         return wait.until(ExpectedConditions.presenceOfElementLocated(localizador));
     }
 
@@ -101,22 +102,22 @@ public class ClaseBase {
         return wait.until(ExpectedConditions.elementToBeClickable(localizador));
     }
 
-    public WebDriver conexionDriver(String ruta, String property, String browser){
-        switch (browser){
-            case "chrome":
-                System.setProperty(property, ruta);
-                this.driver = new ChromeDriver();
-                return driver;
-            case "firefox":
-                System.setProperty(property, ruta);
-                this.driver = new FirefoxDriver();
-                return driver;
-            default:
-                return driver;
+
+    public WebDriver conexionDriver(String browser,String rutaDriver, String propertyDriver){
+        if(browser.equalsIgnoreCase("chrome")){
+            System.setProperty(propertyDriver,rutaDriver);
+            this.driver = new ChromeDriver();
+        }else if(browser.equalsIgnoreCase("firefox")){
+            System.setProperty(propertyDriver,rutaDriver);
+            this.driver = new FirefoxDriver();
+        }else if(browser.equalsIgnoreCase("IExplorer")){
+            System.setProperty(propertyDriver,rutaDriver);
+            this.driver = new InternetExplorerDriver();
         }
+        return this.driver;
     }
 
-    public void maximizarVentana(){
+    public void maximizarBrowser(){
         this.driver.manage().window().maximize();
     }
 

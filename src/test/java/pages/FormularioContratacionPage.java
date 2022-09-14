@@ -2,9 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utilidades.ClaseBase;
+import utilidades.BaseClass;
 
-public class FormularioContratacionPage extends ClaseBase {
+public class FormularioContratacionPage extends BaseClass {
 
     public FormularioContratacionPage(WebDriver driver) {
         super(driver);
@@ -22,13 +22,13 @@ public class FormularioContratacionPage extends ClaseBase {
 
     //acciones de la pagina
     public void llenarFormularioRetomaContratacion(String rut, String nroSerie){
-        agregarTexto(esperarPorPresenciaElemento(locatorTxtRut), rut);
-        agregarTexto(esperarPorPresenciaElemento(locatorTxtNroSerie), nroSerie);
+        agregarTexto(esperaExplicita(locatorTxtRut), rut);
+        agregarTexto(esperaExplicita(locatorTxtNroSerie), nroSerie);
         click(esperarPorElementoAClickear(locatorChkAutorizacion));
         click(esperarPorElementoAClickear(locatorBtnContinuar));
     }
 
     public String obtenerMensajeError(){
-        return obtenerTexto(esperarPorPresenciaElemento(locatorLblError));
+        return obtenerTexto(esperaExplicita(locatorLblError));
     }
 }

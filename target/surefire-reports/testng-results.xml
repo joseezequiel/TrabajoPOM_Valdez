@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-14T20:18:06Z" name="Suite pruebas de regresión" finished-at="2022-09-14T20:18:19Z" duration-ms="12932">
+    <groups>
+    </groups>
+    <test started-at="2022-09-14T20:18:06Z" name="Test Basics 1" finished-at="2022-09-14T20:18:19Z" duration-ms="12932">
+      <class name="tests.Tests">
+        <test-method is-config="true" signature="inicioSuitDePruebas()[pri:0, instance:tests.Tests@482cd91f]" started-at="2022-09-14T20:18:06Z" name="inicioSuitDePruebas" finished-at="2022-09-14T20:18:06Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicioSuitDePruebas -->
+        <test-method is-config="true" signature="preparacionClase()[pri:0, instance:tests.Tests@482cd91f]" started-at="2022-09-14T20:18:06Z" name="preparacionClase" finished-at="2022-09-14T20:18:06Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparacionClase -->
+        <test-method is-config="true" signature="preparacionTests()[pri:0, instance:tests.Tests@482cd91f]" started-at="2022-09-14T20:18:06Z" name="preparacionTests" finished-at="2022-09-14T20:18:12Z" duration-ms="6301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparacionTests -->
+        <test-method signature="CP001_loginInvalidEmail()[pri:0, instance:tests.Tests@482cd91f]" started-at="2022-09-14T20:18:12Z" name="CP001_loginInvalidEmail" finished-at="2022-09-14T20:18:19Z" duration-ms="6556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CP001_loginInvalidEmail -->
+        <test-method is-config="true" signature="preparacionPrueba()[pri:0, instance:tests.Tests@482cd91f]" started-at="2022-09-14T20:18:19Z" name="preparacionPrueba" finished-at="2022-09-14T20:18:19Z" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparacionPrueba -->
+        <test-method is-config="true" signature="FinSuitDePruebas()[pri:0, instance:tests.Tests@482cd91f]" started-at="2022-09-14T20:18:19Z" name="FinSuitDePruebas" finished-at="2022-09-14T20:18:19Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinSuitDePruebas -->
+      </class> <!-- tests.Tests -->
+    </test> <!-- Test Basics 1 -->
+  </suite> <!-- Suite pruebas de regresión -->
+</testng-results>

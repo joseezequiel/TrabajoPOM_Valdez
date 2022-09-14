@@ -14,12 +14,16 @@ import java.util.Iterator;
 import java.util.List;
 
 public class DataDriven {
-    public List<String> obtenerDatosPrueba(String tituloCp) throws IOException {
+    public static ArrayList<String> getData(String tituloCp) throws IOException {
 
         ArrayList<String> datos = new ArrayList<String>();
         FileInputStream file;
 
-        file = new FileInputStream("C:\\Users\\Jose.Valdez\\Documents\\TrabajoPOM_Valdez\\src\\test\\resources\\datos\\DataDriven.xlsx");
+        PropertiesDriven properties = new PropertiesDriven();
+
+
+        String rutaProyecto = System.getProperty("user.dir");
+        file = new FileInputStream(rutaProyecto + properties.getProperty("rutaExcel"));
 
         //crear un objeto de tipo excel
         XSSFWorkbook excel = new XSSFWorkbook(file);
@@ -28,7 +32,7 @@ public class DataDriven {
         //System.out.println("Cantidad de hojas: " + cantidadHojasExcel);
 
         for (int i = 0; i < cantidadHojasExcel; i++) {
-            if (excel.getSheetName(i).equalsIgnoreCase("DatosCP")) {
+            if (excel.getSheetName(i).equalsIgnoreCase(properties.getProperty("nombreHojaExcel"))) {
                 XSSFSheet hojaExcel = excel.getSheetAt(i);
                 Iterator<Row> filas = hojaExcel.iterator();
                 Row primeraFila = filas.next();
@@ -40,7 +44,7 @@ public class DataDriven {
                 //identificamos la columna que dice "CasosDePrueba"
                 while (celda.hasNext()) {
                     Cell celdaSeleccionada = celda.next();
-                    if (celdaSeleccionada.getStringCellValue().equalsIgnoreCase("CasosDePrueba")) {
+                    if (celdaSeleccionada.getStringCellValue().equalsIgnoreCase(properties.getProperty("tituloCp"))) {
                         //identificamos la columna
                         columna = k;
                     }

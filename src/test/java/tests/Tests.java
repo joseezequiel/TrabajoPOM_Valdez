@@ -3,80 +3,74 @@ package tests;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import pages.AuthenticationPage;
 import pages.FormularioContratacionPage;
 import pages.HomePage;
 import pages.RetomarContratacionPage;
 import utilidades.DataDriven;
+import utilidades.PropertiesDriven;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tests {
     //atributos
     private WebDriver driver;
     private DataDriven data;
-
-    private List<String> datosCP;
+    private ArrayList<String> datosCasosDePrueba;
+    private PropertiesDriven properties;
 
     //atributos (page)
     private HomePage homePage;
-    private RetomarContratacionPage retomaContratacionPage;
-    private FormularioContratacionPage formularioContratacionPage;
+    private AuthenticationPage authenticationPage;
+
 
     @BeforeSuite
     public void inicioSuitDePruebas(){
+        properties = new PropertiesDriven();
         System.out.println("Inicio de suit de pruebas automatizadas.");
     }
 
-    @BeforeClass
-    public void preparacionClase(){
-        String rutaProyecto = System.getProperty("user.dir");
-        String rutaDriver = rutaProyecto + "\\src\\test\\resources\\drives\\chromedriver.exe";
-        String property = "webdriver.chrome.driver";
-        String browser = "chrome";
-
-        data = new DataDriven();
-
-        homePage = new HomePage(driver);
-        homePage.conexionDriver(rutaDriver, property, browser);
-
-        // obtengo el driver de la página anterior, en este caso de homepage.
-        retomaContratacionPage = new RetomarContratacionPage(homePage.getDriver());
-
-        formularioContratacionPage = new FormularioContratacionPage(retomaContratacionPage.getDriver());
+    @AfterSuite
+    public void FinSuitDePruebas(){
+        System.out.println("Fin de suit de pruebas automatizadas.");
     }
+
 
     @BeforeMethod
     public void preparacionTests(){
-        String url = "https://publico.transbank.cl/";
-        homePage.cargarPagina(url);
-        homePage.maximizarVentana();
-    }
+        //Instanciar los objetos
+        datosCasosDePrueba = new ArrayList<String>();
+        homePage = new HomePage(driver);
+        String rutaDriver = System.getProperty("user.dir") + properties.getProperty("rutaDriver");
 
-    @Test
-    public void CP001_retomaFormularioContratacion() throws IOException {
-        datosCP = data.obtenerDatosPrueba("CP001_retomaFormularioContratacion");
-        homePage.irAHazteCliente();
-        retomaContratacionPage.irARetomarContratacion();
-        formularioContratacionPage.llenarFormularioRetomaContratacion(datosCP.get(1), datosCP.get(2));
+        homePage.conexionDriver(properties.getProperty("browser"), rutaDriver, properties.getProperty("propertyDriver"));
 
-        Assert.assertEquals(datosCP.get(3), formularioContratacionPage.obtenerMensajeError());
+        authenticationPage = new AuthenticationPage(homePage.getDriver());
+
+        homePage.cargarSitio(properties.getProperty("url"));
+        homePage.maximizarBrowser();
     }
 
     @AfterMethod
-    public void after(){
-        homePage.cerrarBrowser();
+    public void preparacionPrueba(){
+        authenticationPage.cerrarBrowser();
     }
 
-    @Test
-    public void CP002(){}
+
+    @BeforeClass
+    public void preparacionClase(){
+    }
+
 
     @Test
-    public void CP003(){}
+    public void CP001_loginInvalidEmail() throws IOException {
+        datosCasosDePrueba = data.getData("CP001_loginInvalidEmail");
+        homePage.irIniciarSesion();
+        authenticationPage.iniciarSesion(datosCasosDePrueba.get(1), datosCasosDePrueba.get(2));
+        Assert.assertEquals(authenticationPage.obtenerMensajeInvalidEmail(), datosCasosDePrueba.get(3));
+    }
 
-    @Test
-    public void CP004(){}
 
-    @Test
-    public void CP005(){}
 }
