@@ -14,11 +14,16 @@ public class HomePage extends BaseClass {
     By locatorBtnGoToAuthenticationPage = By.xpath("//a[contains(text(),'Sign in')]");
     By locatorBtnContactUs = By.xpath("//header/div[2]/div[1]/div[1]/nav[1]/div[2]/a[1]");
     By locatorBtnSearch = By.xpath("//header/div[3]/div[1]/div[1]/div[2]/form[1]/button[1]");
+    By locatorBtnGoToWomanCategoryPage = By.xpath("//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/a[1]");
 
 
     //acciones del page
     public void irIniciarSesion(){
         click(esperaExplicita(locatorBtnGoToAuthenticationPage));
+    }
+
+    public void irWomanPage(){
+        click(esperaExplicita(locatorBtnGoToWomanCategoryPage));
     }
 
 }

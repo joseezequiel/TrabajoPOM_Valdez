@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="55.181" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="214.613" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="webdriver.chrome.driver" value="C:\Users\Jose\Documents\dev\automatizacion\TrabajoPOM_Valdez\src\test\resources\drives\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Jose\AppData\Local\Temp\surefire14320718475735683310\surefirebooter-20220914191714341_3.jar C:\Users\Jose\AppData\Local\Temp\surefire14320718475735683310 2022-09-14T19-17-14_068-jvmRun1 surefire-20220914191714341_1tmp surefire_0-20220914191714341_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Jose\AppData\Local\Temp\surefire14529786128538436324\surefirebooter-20220915224355739_3.jar C:\Users\Jose\AppData\Local\Temp\surefire14529786128538436324 2022-09-15T22-43-55_498-jvmRun1 surefire-20220915224355739_1tmp surefire_0-20220915224355739_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Jose\Documents\dev\automatizacion\TrabajoPOM_Valdez\target\test-classes;C:\Users\Jose\Documents\dev\automatizacion\TrabajoPOM_Valdez\target\classes;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Jose\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Jose\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Jose\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Jose\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Jose\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Jose\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Jose\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Jose\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Jose\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Jose\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Jose\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Jose\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\Jose\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Jose\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\Jose\.m2\repository\org\apache\poi\poi-ooxml\4.0.0\poi-ooxml-4.0.0.jar;C:\Users\Jose\.m2\repository\org\apache\poi\poi\4.0.0\poi-4.0.0.jar;C:\Users\Jose\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Jose\.m2\repository\org\apache\commons\commons-collections4\4.2\commons-collections4-4.2.jar;C:\Users\Jose\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.0.0\poi-ooxml-schemas-4.0.0.jar;C:\Users\Jose\.m2\repository\org\apache\xmlbeans\xmlbeans\3.0.1\xmlbeans-3.0.1.jar;C:\Users\Jose\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\Jose\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Jose\AppData\Local\Temp\surefire14320718475735683310\surefirebooter-20220914191714341_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jose\AppData\Local\Temp\surefire14529786128538436324\surefirebooter-20220915224355739_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.2.1+1-1"/>
@@ -57,25 +57,85 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="CP001_loginInvalidEmail" classname="tests.Tests" time="6.803">
+  <testcase name="CP001_loginInvalidEmail" classname="tests.Tests" time="18.037">
     <system-out><![CDATA[Inicio de suit de pruebas automatizadas.
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 45504
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 17012
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1663193835.720][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
-sep. 14, 2022 7:17:15 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+[1663292636.985][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:43:57 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="CP002_loginEmail" classname="tests.Tests" time="37.075">
-    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 17368
+  <testcase name="CP002_loginEmail" classname="tests.Tests" time="11.105">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 40355
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1663193847.809][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
-sep. 14, 2022 7:17:27 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+[1663292669.315][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:44:29 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="CP003_logInSuccessfully" classname="tests.Tests" time="11.458">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 32628
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1663292692.460][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:44:52 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="CP004_addProductToWishlist" classname="tests.Tests" time="18.86">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 6265
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1663292710.217][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:45:10 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="CP005_checkThatProductAppearsonWantedList" classname="tests.Tests" time="33.809">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 27105
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1663292736.362][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:45:36 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="CP006_searchProductNotAddedToWishList" classname="tests.Tests" time="31.506">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 1976
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1663292777.926][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:46:17 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="CP007_agregarProductoSinLogin" classname="tests.Tests" time="8.796">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 41487
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1663292814.521][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:46:54 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="CP008_emptyCartMessage" classname="tests.Tests" time="15.476">
+    <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 36027
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1663292830.221][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sep. 15, 2022 10:47:10 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>

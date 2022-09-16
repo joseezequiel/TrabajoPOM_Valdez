@@ -1,8 +1,9 @@
 utilidades\BaseClass.class
+pages\ShoppingCartPage.class
 pages\AuthenticationPage.class
-pages\FormularioContratacionPage.class
 tests\Tests.class
 pages\HomePage.class
 utilidades\DataDriven.class
 utilidades\PropertiesDriven.class
-pages\RetomarContratacionPage.class
+pages\MyAccountPage.class
+pages\WomanCategoryPage.class

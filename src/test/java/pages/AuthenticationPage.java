@@ -30,12 +30,6 @@ public class AuthenticationPage extends BaseClass {
         click(esperaExplicita(locatorBtnSignIn));
     }
 
-    public void crearCuenta(String email){
-        agregarTexto(esperaExplicita(locatorLblEmailCreateAccount), email);
-
-        click(esperaExplicita(locatorBtnCreateAnAccount));
-    }
-
     public String obtenerMensajeInvalidEmail(){
         return obtenerTexto(esperaExplicita(locatorLblInvalidEmail));
     }
@@ -43,13 +37,5 @@ public class AuthenticationPage extends BaseClass {
     public String obtenerMensajeAuthenticationEmailFailed(){
         return obtenerTexto(esperaExplicita(locatorTxtAuthenticationEmailFailed));
     }
-
-
-    //public void irAWomanCategoryPage(String email){
-    //  agregarTexto(esperaExplicita(locatorLblEmailCreateAccount), email);
-
-    //  click(esperaExplicita(locatorBtnCreateAnAccount));
-    //}
-
 
 }
